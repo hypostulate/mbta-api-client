@@ -1,0 +1,15 @@
+# AlertResource
+
+An effect (enumerated in `*/attributes/effect` and human-readable in `*/attributes/service_effect`) on a provided service (facility, route, route type, stop and/or trip in `/*/attributes/informed_entity`) described by a banner (`*/attributes/banner`), short header (`*/attributes/short_header`), header `*/attributes/header`, and description (`*/attributes/description`) that is active for one or more periods (`*/attributes/active_period`) caused by a cause (`*/attribute/cause`) that somewhere in its lifecycle (enumerated in `*/attributes/lifecycle` and human-readable in `*/attributes/timeframe`).  See [GTFS Realtime `FeedMessage` `FeedEntity` `Alert`](https://github.com/google/transit/blob/master/gtfs-realtime/spec/en/reference.md#message-alert)  ## Descriptions  There are 5 descriptive attributes.  | JSON pointer                                | Usage                                                                           | |---------------------------------------------|---------------------------------------------------------------------------------| | `*/attributes/banner`       | Display as alert across application/website                                     | | `*/attributes/short_header` | When `*/attributes/header` is too long to display               | | `*/attributes/header`       | Used before showing and prepended to `*/attributes/description` | | `*/attributes/description`  | Used when user asks to expand alert.                                            |  ## Effect  | JSON pointer                                  |                | |-----------------------------------------------|----------------| | `*/attributes/effect`         | Enumerated     | | `*/attributes/service_effect` | Human-readable |  ## Timeline  There are 3 timeline related attributes  | JSON pointer                                 | Description                                                                              | |----------------------------------------------|------------------------------------------------------------------------------------------| | `*/attributes/active_period` | Exact Date/Time ranges alert is active                                                   | | `*/attributes/lifecycle`     | Enumerated, machine-readable description of `*/attributes/active_period` | | `*/attributes/timeframe`     | Human-readable description of `*/attributes/active_period`               | 
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**type** | **str** | The JSON-API resource type | [optional] 
+**relationships** | [**AlertResourceRelationships**](AlertResourceRelationships.md) |  | [optional] 
+**links** | [**object**](.md) |  | [optional] 
+**id** | **str** | The JSON-API resource ID | [optional] 
+**attributes** | [**AlertResourceAttributes**](AlertResourceAttributes.md) |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
